@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "OnView";
+}
+@model Sol_EmployeeInformation.ViewModel.UserViewModel
+<h1>Employee Details</h1>
+
+<div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 d-flex align-items-stretch">
+    <div class="card m-3" style="width: 18rem;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div style='background-color:lavender;height:110px;align-items:center;'>
+            <center>
+                <img class="card-img" src="@Url.Content(Model.User.ImageURL)" style="height:100px;width:100px;border-radius:50%;margin-top:5px;" alt="Card image cap">
+            </center>
+        </div>
+        <div style="background-color:lightseagreen;height:30px;">
+            <center>
+                <h5 class="card-title" style="color:white;">
+                    @Model.User.FirstName @Model.User.LastName
+                </h5>
+            </center>
+        </div>
+        <div class="bg-light d-flex align-items-center">
+            <div class="card-header col p-2 m-0" style="border-right-color:lightseagreen;border-right-style:ridge; border-width:1px;">
+                <p class="card-text" style="text-align:center;color:lightseagreen;">Designation</p>
+                <hr style="border-color:lightseagreen; border-style:dotted;" />
+                <p class="card-text" style="text-align:center;">@Model.User.Designation</p>
+            </div>
+            <div class="card-header col p-2 m-0">
+                <p class="card-text" style="text-align:center;color:lightseagreen;">Department</p>
+                <hr style="border-color:lightseagreen; border-style:dotted;" />
+                <p class="card-text" style="text-align:center;">@Model.User.Department</p>
+            </div>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-light"><span style="color:lightseagreen;">DOB</span> : @Model.User.DOB.ToShortDateString()</li>
+            <li class="list-group-item bg-light">@Model.User.Address</li>
+        </ul>
+        <a class='btn btn-primary' style="background-color:mediumpurple;border-color:mediumpurple;color:white;font-weight:bold;" asp-action="Index" asp-controller="Users"> Back</a>
+    </div>
+
