@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Sol_EmployeeInformation.Repository;
+using Sol_Core_EmployeeInfo.Repository;
 
-namespace Sol_EmployeeInformation
+namespace Sol_Core_EmployeeInfo
 {
     public class Startup
     {

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model Sol_Core_EmployeeInfo.ViewModel.UserViewModel
+
+<h2 style="color:lightseagreen;">Employee Details</h2>
+
+<form id="frmMain">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @*<div class="input-group">
+                        <input type="text" id="txtSearch" class="form-control" placeholder="First Name | Last Name | Designation | Department " aria-label="Recipient's username" aria-describedby="basic-addon2" asp-for="SearchQuery">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" style="background-color:lightseagreen;color:white;font-weight:bold;" id="btnSearch" onclick="SearchAction(this.id);">Search</button>
+                            <button class="btn btn-outline-secondary" style="background-color:lavender;color:lightseagreen;font-weight:bold;" id="btnRefresh" onclick="SearchAction(this.id);">Refresh</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="SearchMessage" style="height:30px;border-radius:5px;border-style:solid;border-color:lightseagreen;color:salmon;border-width:2px;">
+                        <span style="padding-left:20px;padding-bottom:10px;">No result found for this search. </span>
+                    </div>*@
+                <div class="p-2 m-1">
+                    @await Html.PartialAsync("~/Views/Users/PartialViews/_SearchBar.cshtml", Model)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="p-2">
+                    <user-infocard item-source="@Model.UsersList" controller-name="Users" action-name="OnView"></user-infocard>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#SearchMessage").hide();
+            @if (ViewBag.JavascriptFunction != null)
+            {
+                @Html.Raw(ViewBag.JavascriptFunction);
+            }
+        });
+
+
+        function ShowSearchMessage(displayMessage) {
+            //alert(displayMessage);
+            if (displayMessage=='1')
+                $("#SearchMessage").show();
+            else
+                $("#SearchMessage").hide();
+        };
+
+        function SearchAction(clicked) {
+            var id = clicked;
+            //alert(id);
+            if (id === 'btnSearch') {
+                 $("#frmMain").attr("method","GET");
+                 $("#frmMain").attr("action", '@Url.Action("OnSearch", "Users")');
+                }
+                else if (id === 'btnRefresh') {
+                $("#frmMain").attr("method","GET");
+                $("#frmMain").attr("action", '@Url.Action("Index", "Users")');
+                $("#txtSearch").val("");
+                $("#SearchMessage").hide();
+                }
+
+                $("#frmMain").submit();
+                };
+    </script>
+
+
+}
+
+
+

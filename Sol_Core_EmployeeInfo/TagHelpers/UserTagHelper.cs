@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.Runtime.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using Sol_EmployeeInformation.Models;
+using Sol_Core_EmployeeInfo.Models;
 
-namespace Sol_EmployeeInformation.TagHelpers
+namespace Sol_Core_EmployeeInfo.TagHelpers
 {
     // You may need to install the Microsoft.AspNetCore.Razor.Runtime package into your project
     [HtmlTargetElement("user-infocard")]

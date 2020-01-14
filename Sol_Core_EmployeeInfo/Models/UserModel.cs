@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sol_EmployeeInformation.Models
+namespace Sol_Core_EmployeeInfo.Models
 {
     public class UserModel
     {

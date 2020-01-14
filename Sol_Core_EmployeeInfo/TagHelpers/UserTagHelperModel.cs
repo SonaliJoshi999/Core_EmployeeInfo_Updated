@@ -1,10 +1,10 @@
-﻿using Sol_EmployeeInformation.Models;
+﻿using Sol_Core_EmployeeInfo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sol_EmployeeInformation.TagHelpers
+namespace Sol_Core_EmployeeInfo.TagHelpers
 {
     public class UserTagHelperModel
     {

@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Sol_EmployeeInformation.Models;
+using Sol_Core_EmployeeInfo.Models;
 
-namespace Sol_EmployeeInformation.Controllers
+namespace Sol_Core_EmployeeInfo.Controllers
 {
     public class HomeController : Controller
     {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Sol_EmployeeInformation
+namespace Sol_Core_EmployeeInfo
 {
     public class Program
     {

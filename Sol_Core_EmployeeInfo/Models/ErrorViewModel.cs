@@ -1,6 +1,6 @@
 using System;
 
-namespace Sol_EmployeeInformation.Models
+namespace Sol_Core_EmployeeInfo.Models
 {
     public class ErrorViewModel
     {

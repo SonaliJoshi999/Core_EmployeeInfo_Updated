@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Sol_EmployeeInformation.Repository;
-using Sol_EmployeeInformation.ViewModel;
+using Sol_Core_EmployeeInfo.Repository;
+using Sol_Core_EmployeeInfo.ViewModel;
 
-namespace Sol_EmployeeInformation.Controllers
+namespace Sol_Core_EmployeeInfo.Controllers
 {
     public class UsersController : Controller
     {
